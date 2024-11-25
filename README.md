@@ -13,7 +13,7 @@ Tecnologias Utilizadas:
 
 OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
 
-<br/>
+´´´
 Como executar:
 - Faça o download do projeto.
 - Importe o projeto na IDE de sua preferência.
@@ -21,18 +21,21 @@ Como executar:
 - Instale do plugin do Lombok.
 - Dê comandos para o Maven limpar e atualizar a peça/projeto.
 - Dê "start" na classe "PaymentResourcesApplication".
+´´´
 
-<br/>
+´´´
 Como visualizar as apis/endpoints:
 - Builde o projeto em "Debug".
 - Após o projeto ter startado, acesse: http://localhost:8080/swagger-ui/index.html
 - Faça os testes que forem necessários.
+´´´
 
-<br/>
+´´´
 Como conferir se os dados das apis estão sendo salvos, modificados?
 - Builde o projeto em "Debug".
 - Após o projeto ter startado, acesse: http://localhost:8080/h2-console
 - Faça os testes que forem necessários.
 ![image](https://github.com/user-attachments/assets/610c6c37-67c7-4824-ad6d-9189ffce9a5a)
+´´´
 
 
