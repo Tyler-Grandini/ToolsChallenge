@@ -1,5 +1,3 @@
-#ToolsChallenge
-
 Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e tem como objetivo criar APIS robustas, escaláveis e de fácil integração, utilizando as melhores práticas e tecnologias modernas.
 
 Tecnologias Utilizadas:
