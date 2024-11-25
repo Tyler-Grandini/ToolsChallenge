@@ -1,7 +1,5 @@
 Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e tem como objetivo criar APIS robustas, escaláveis e de fácil integração, utilizando as melhores práticas e tecnologias modernas.
 
-Contexto: Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
-
 Tecnologias Utilizadas:
 - Spring Initializr: Utilizado para gerar a estrutura inicial do projeto de forma ágil e padronizada.
 - Arquitetura MVC: Modelo de design de software para separar as responsabilidades da aplicação em três camadas: Modelo (dados), Visão (interface com o usuário) e Controle (lógica de negócios), promovendo uma estrutura modular e de fácil manutenção.
@@ -12,4 +10,7 @@ Tecnologias Utilizadas:
 - Swagger: Utilizado para gerar a documentação da API de forma automática e interativa, permitindo que os desenvolvedores consumam e testem a API diretamente pela interface Swagger UI.
 - JUnit & Mockito: Ferramentas de teste utilizadas para garantir a qualidade e confiabilidade do código. O JUnit é usado para testes unitários, enquanto o Mockito facilita a criação de mocks para simular comportamentos de dependências e isolar o teste de unidades específicas.
 
-OBSERVAÇÃO: TOMEI A LIBERDADE DE ESCREVER  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
+OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
+
+Contexto Sugerido: Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
+
