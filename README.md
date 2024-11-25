@@ -1,3 +1,5 @@
+#ToolsChallenge
+
 Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e tem como objetivo criar APIS robustas, escaláveis e de fácil integração, utilizando as melhores práticas e tecnologias modernas.
 
 Tecnologias Utilizadas:
@@ -12,5 +14,6 @@ Tecnologias Utilizadas:
 
 OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
 
-Contexto Sugerido: Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
+Contexto Sugerido:
+- Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
 
