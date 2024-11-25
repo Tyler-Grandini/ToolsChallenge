@@ -13,10 +13,11 @@ import java.util.UUID;
 
 @Service
 public class PaymentService {
+
     @Autowired
     private TransactionRepository transactionRepository;
 
-    public Transaction makePayment(Transaction initialTransaction) throws InvalidTransactionException {
+    public Transaction makePayment(Transaction initialTransaction) {
         validateTransaction(initialTransaction);
 
         initialTransaction.getTransactionDetails().setNsu(123456789);
@@ -26,12 +27,12 @@ public class PaymentService {
         return transactionRepository.save(initialTransaction);
     }
 
-    private void validateTransaction(Transaction transaction) throws InvalidTransactionException {
+    private void validateTransaction(Transaction transaction) {
         if (transaction == null) {
             throw new InvalidTransactionException("Transaction data cannot be null!");
         }
 
-        Map<String, Object> fieldsToValidate = Map.of(
+        Map<String,Object> fieldsToValidate = Map.of(
             "Payment Id", transaction.getPaymentId(),
             "Encrypted Card Number", transaction.getEncryptedCardNumber(),
             "Transaction Details", transaction.getTransactionDetails(),
@@ -48,10 +49,12 @@ public class PaymentService {
     }
 
     private void checkSimilarPaymentExists(Transaction transaction) {
-        // validar pelo
-        transactionRepository.find
+        if (transactionRepository.findByEncryptedCardNumberAndTransactionDetails_TransactionalValue(
+            transaction.getEncryptedCardNumber(),
+            transaction.getTransactionDetails().getTransactionalValue()).isPresent()) {
+            throw new InvalidTransactionException("A similar transaction already exists!");
+        }
     }
-
 
     public Transaction refundPayment(UUID paymentId) {
         Transaction transaction =
