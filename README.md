@@ -1,4 +1,5 @@
-Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e tem como objetivo de criar APIS robusta, escalável e de fácil integração, utilizando as melhores práticas e tecnologias modernas
+Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e tem como objetivo criar APIS robusta, escaláveis e de fácil integração, utilizando as melhores práticas e tecnologias modernas.
+
 Contexto: Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
 
 Tecnologias Utilizadas:
@@ -10,3 +11,5 @@ Tecnologias Utilizadas:
 - Banco H2: Banco de dados em memória, utilizado durante a execução do aplicativo para testes e desenvolvimento rápidos. O H2 oferece um ambiente leve e eficiente para armazenar e consultar dados temporários durante o ciclo de vida da aplicação.
 - Swagger: Utilizado para gerar a documentação da API de forma automática e interativa, permitindo que os desenvolvedores consumam e testem a API diretamente pela interface Swagger UI.
 - JUnit & Mockito: Ferramentas de teste utilizadas para garantir a qualidade e confiabilidade do código. O JUnit é usado para testes unitários, enquanto o Mockito facilita a criação de mocks para simular comportamentos de dependências e isolar o teste de unidades específicas.
+
+OBSERVAÇÃO: TOMEI A LIBERDADE DE ESCREVER  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
