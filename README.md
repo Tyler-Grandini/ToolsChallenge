@@ -1,4 +1,4 @@
-Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e tem como objetivo de criar uma API robusta, escalável e de fácil integração, utilizando as melhores práticas e tecnologias modernas
+Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e tem como objetivo de criar APIS robusta, escalável e de fácil integração, utilizando as melhores práticas e tecnologias modernas
 Contexto: Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
 
 Tecnologias Utilizadas:
