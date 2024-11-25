@@ -14,10 +14,6 @@ Tecnologias Utilizadas:
 OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
 
 
-Contexto Sugerido:
-- Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
-
-
 Como executar:
 - Faça o download do projeto.
 - Importe o projeto na IDE de sua preferência.
@@ -26,10 +22,12 @@ Como executar:
 - Dê comandos para o Maven limpar e atualizar a peça/projeto.
 - Dê "start" na classe "PaymentResourcesApplication".
 
+
 Como visualizar as apis/endpoints:
 - Builde o projeto em "Debug".
 - Após o projeto ter startado, acesse: http://localhost:8080/swagger-ui/index.html
 - Faça os testes que forem necessários.
+
 
 Como conferir se os dados das apis estão sendo salvos, modificados?
 - Builde o projeto em "Debug".
