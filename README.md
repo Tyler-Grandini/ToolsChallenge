@@ -3,6 +3,7 @@ Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e
 Tecnologias Utilizadas:
 - Spring Initializr: Utilizado para gerar a estrutura inicial do projeto de forma ágil e padronizada.
 - Arquitetura MVC: Modelo de design de software para separar as responsabilidades da aplicação em três camadas: Modelo (dados), Visão (interface com o usuário) e Controle (lógica de negócios), promovendo uma estrutura modular e de fácil manutenção.
+- Java 17 com Lombok.
 - Spring Boot: Framework principal para construção da API, garantindo simplicidade e configuração mínima para criação de aplicações Java.
 - Spring Web: Utilizado para construir a camada de comunicação da API, seguindo os princípios REST e tornando as rotas da API simples e eficazes.
 - JPA (Java Persistence API): Para a persistência de dados, facilitando a interação com o banco de dados de forma orientada a objetos e sem a necessidade de escrever SQL manual.
@@ -12,6 +13,27 @@ Tecnologias Utilizadas:
 
 OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
 
+
 Contexto Sugerido:
 - Você trabalha em um Banco, no setor de cartões de crédito, e faz parte do Time Elite. A missão do time é implementar uma API de Pagamentos com os seguintes requisitos:
+
+
+Como executar:
+- Faça o download do projeto.
+- Importe o projeto na IDE de sua preferência.
+- Em sua IDE, defina a linguagem como Java 17.
+- Instale do plugin do Lombok.
+- Dê comandos para o Maven limpar e atualizar a peça/projeto.
+- Dê "start" na classe "PaymentResourcesApplication".
+
+Como visualizar as apis/endpoints:
+- Builde o projeto em "Debug".
+- Após o projeto ter startado, acesse: http://localhost:8080/swagger-ui/index.html
+- Faça os testes que forem necessários.
+
+Como conferir se os dados das apis estão sendo salvos, modificados?
+- Builde o projeto em "Debug".
+- Após o projeto ter startado, acesse: http://localhost:8080/h2-console
+- Faça os testes que forem necessários.
+
 
