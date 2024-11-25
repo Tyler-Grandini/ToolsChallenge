@@ -13,7 +13,7 @@ Tecnologias Utilizadas:
 
 OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.
 
-</b>
+<br/>
 Como executar:
 - Faça o download do projeto.
 - Importe o projeto na IDE de sua preferência.
@@ -22,13 +22,13 @@ Como executar:
 - Dê comandos para o Maven limpar e atualizar a peça/projeto.
 - Dê "start" na classe "PaymentResourcesApplication".
 
-</b>
+<br/>
 Como visualizar as apis/endpoints:
 - Builde o projeto em "Debug".
 - Após o projeto ter startado, acesse: http://localhost:8080/swagger-ui/index.html
 - Faça os testes que forem necessários.
 
-</b>
+<br/>
 Como conferir se os dados das apis estão sendo salvos, modificados?
 - Builde o projeto em "Debug".
 - Após o projeto ter startado, acesse: http://localhost:8080/h2-console
