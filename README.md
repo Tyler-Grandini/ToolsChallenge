@@ -47,7 +47,9 @@ Como conferir se os dados das apis estão sendo salvos, modificados?
 ![image](https://github.com/user-attachments/assets/6416e398-8056-4c26-bc63-8555e333be37)
 
 
-**CONSULTE AS EVIDÊNCIAS (JSON ESPERADO X JSON OBTIDO) BAIXANDO O ARQUIVO ABAIXO**:
-**OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.**
+**Baixe o arquivo "Evidências.xlsx" para consultar os resultados obtidos (JSON ESPERADO X JSON OBTIDO):**
 [EVIDÊNCIAS.xlsx](https://github.com/user-attachments/files/17921619/EVIDENCIAS.xlsx)
+
+
+**OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.**
 
