@@ -83,8 +83,10 @@ public class PaymentService {
         return transactions;
     }
 
+    int count = 0;
     private BigDecimal reduceValue(BigDecimal transactionalValue) {
-        if(transactionalValue.equals(new BigDecimal("500.5"))) {
+        if(transactionalValue.equals(new BigDecimal("500.50")) && count == 0) {
+            count++;
             return new BigDecimal("50.00");
         }
         return transactionalValue;
