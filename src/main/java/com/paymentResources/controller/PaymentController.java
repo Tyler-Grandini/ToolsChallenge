@@ -1,6 +1,7 @@
 package com.paymentResources.controller;
 
-import com.paymentResources.dto.Transaction;
+import com.paymentResources.model.Transaction;
+import com.paymentResources.dto.TransactionResponse;
 import com.paymentResources.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,23 +15,40 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentServicee;
 
+    private TransactionResponse transactionResponse = new TransactionResponse();
+
     @PostMapping
-    public ResponseEntity<Transaction> makePayment(@RequestBody Transaction initialTransaction) {
-        return ResponseEntity.ok(paymentServicee.makePayment(initialTransaction));
+    public ResponseEntity<TransactionResponse> makePayment(@RequestBody Transaction initialTransaction) {
+        Transaction finalTransaction = paymentServicee.makePayment(initialTransaction);
+        transactionResponse.setTransaction(finalTransaction);
+        return ResponseEntity.ok(transactionResponse);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Transaction> findPayment(@PathVariable("id") UUID paymentId) {
-        return ResponseEntity.ok(paymentServicee.findPayment(paymentId));
+    public ResponseEntity<TransactionResponse> findPayment(@PathVariable("id") UUID paymentId) {
+        Transaction finalTransaction =  paymentServicee.findPayment(paymentId);
+        transactionResponse.setTransaction(finalTransaction);
+        return ResponseEntity.ok(transactionResponse);
     }
 
     @GetMapping("/all-payments")
-    public ResponseEntity<List<Transaction>> findAllPayments() {
-        return ResponseEntity.ok(paymentServicee.findAllPayments());
+    public ResponseEntity<List<TransactionResponse>> findAllPayments() {
+        List<Transaction> transactionData = paymentServicee.findAllPayments();
+
+        List<TransactionResponse> responseList = transactionData.stream().map(
+        transaction -> {
+            TransactionResponse response = new TransactionResponse();
+            response.setTransaction(transaction);
+            return response;
+        }).toList();
+
+        return ResponseEntity.ok(responseList);
     }
 
     @GetMapping("/refund/{id}")
-    public ResponseEntity<Transaction> refundPayment(@PathVariable("id") UUID paymentId) {
-        return ResponseEntity.ok(paymentServicee.refundPayment(paymentId));
+    public ResponseEntity<TransactionResponse> refundPayment(@PathVariable("id") UUID paymentId) {
+        Transaction finalTransaction = paymentServicee.refundPayment(paymentId);
+        transactionResponse.setTransaction(finalTransaction);
+        return ResponseEntity.ok(transactionResponse);
     }
 }

@@ -67,15 +67,15 @@ public class PaymentControllerTest {
     @Test
     public void whenPaymentIsSuccessful() {
         // Given
-        when(paymentService.makePayment(any(TransactionResponse.class))).thenReturn(transaction);
+        when(paymentService.makePayment(any(Transaction.class))).thenReturn(transaction);
 
         // When
-        ResponseEntity<TransactionResponse> response = paymentController.makePayment(transactionResponse);
+        ResponseEntity<TransactionResponse> response = paymentController.makePayment(transaction);
 
         // Then
         assertNotNull(response);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        verify(paymentService, times(1)).makePayment(any(TransactionResponse.class));
+        verify(paymentService, times(1)).makePayment(any(Transaction.class));
     }
 
     @Test

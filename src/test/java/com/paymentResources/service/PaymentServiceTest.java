@@ -71,7 +71,7 @@ public class PaymentServiceTest {
         when(transactionRepository.save(any(Transaction.class))).thenReturn(transaction);
 
         // When
-        Transaction result = paymentService.makePayment(transactionResponse);
+        Transaction result = paymentService.makePayment(transaction);
 
         // Then
         assertNotNull(result);
@@ -164,7 +164,7 @@ public class PaymentServiceTest {
                 .thenReturn(Optional.of(transaction));
 
         // When / Then
-        InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(transactionResponse));
+        InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(transaction));
         assertEquals("A similar transaction already exists!", exception.getMessage());
     }
 }
