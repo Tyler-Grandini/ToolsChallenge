@@ -38,6 +38,8 @@ Como visualizar as apis/endpoints:
 ```
 Como conferir se os dados das apis estão sendo salvos, modificados?
 - Builde o projeto em "Debug".
+- Chame no Swagger pelo menos o endpoint api/payment para cadastrar algo no bd H2.
+  Recomendo utilizar o json do arquivo EVIDENCIAS.csv que encontra-se abaixo.
 - Após o projeto ter startado, acesse: http://localhost:8080/h2-console
 - Faça os testes que forem necessários.
 ```
