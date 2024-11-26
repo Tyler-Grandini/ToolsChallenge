@@ -165,6 +165,6 @@ public class PaymentServiceTest {
 
         // When / Then
         InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(transaction));
-        assertEquals("A similar transaction already exists!", exception.getMessage());
+        assertEquals("A similar transaction already exists! Transaction ID: " + transaction.getPaymentId() , exception.getMessage());
     }
 }
