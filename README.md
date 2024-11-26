@@ -39,4 +39,29 @@ Como conferir se os dados das apis estão sendo salvos, modificados?
 ![image](https://github.com/user-attachments/assets/610c6c37-67c7-4824-ad6d-9189ffce9a5a)
 
 
+**Comparações dos Jsons - ESPERADO X OBTIDO:**
+**Comparações dos JSONs - ESPERADO X OBTIDO:**
+
+| **Esperado** | **Obtido** |
+|--------------|------------|
+| ```json      | ```json    |
+| {            | {          |
+|   "encryptedCardNumber": "4444********1234", |   "encryptedCardNumber": "5555********6789", |
+|   "paymentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", |   "paymentId": "123e4567-e89b-12d3-a456-426614174001", |
+|   "transactionDetails": { |   "transactionDetails": { |
+|     "transactionalValue": 500.50, |     "transactionalValue": 450.00, |
+|     "dateTransaction": "01/05/2021 18:30:00", |     "dateTransaction": "02/05/2021 10:00:00", |
+|     "establishment": "Dog World Petshop", |     "establishment": "Cat Heaven Store", |
+|     "nsu": 0, |     "nsu": 1, |
+|     "authorizationCode": 0, |     "authorizationCode": 1234, |
+|     "statusTransaction": "NULL" |     "statusTransaction": "COMPLETED" |
+|   }, |   }, |
+|   "paymentMode": { |   "paymentMode": { |
+|     "typePayment": "PAY_IN_FULL", |     "typePayment": "INSTALLMENTS", |
+|     "parcels": 1 |     "parcels": 3 |
+|   } |   } |
+| } | } |
+| ``` | ``` |
+
+
 
