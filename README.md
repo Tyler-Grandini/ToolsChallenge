@@ -11,7 +11,7 @@ Este projeto foi desenvolvido para o teste prático da empresa Tools Software, e
 - Swagger: Utilizado para gerar a documentação da API de forma automática e interativa, permitindo que os desenvolvedores consumam e testem a API diretamente pela interface Swagger UI.
 - JUnit & Mockito: Ferramentas de teste utilizadas para garantir a qualidade e confiabilidade do código. O JUnit é usado para testes unitários, enquanto o Mockito facilita a criação de mocks para simular comportamentos de dependências e isolar o teste de unidades específicas.
 
-**OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.**
+
 
 ```
 Como executar:
@@ -23,6 +23,8 @@ Como executar:
 - Dê "start" na classe "PaymentResourcesApplication".
 ```
 
+
+
 ```
 Como visualizar as apis/endpoints:
 - Builde o projeto em "Debug".
@@ -30,6 +32,7 @@ Como visualizar as apis/endpoints:
 - Faça os testes que forem necessários.
 ```
 ![image](https://github.com/user-attachments/assets/6173bcf7-7a40-4b1e-b2e3-b625dac5b186)
+
 
 
 ```
@@ -40,3 +43,9 @@ Como conferir se os dados das apis estão sendo salvos, modificados?
 ```
 ![image](https://github.com/user-attachments/assets/610c6c37-67c7-4824-ad6d-9189ffce9a5a)
 ![image](https://github.com/user-attachments/assets/6416e398-8056-4c26-bc63-8555e333be37)
+
+
+**CONSULTE AS EVIDÊNCIAS (JSON ESPERADO X JSON OBTIDO) BAIXANDO O ARQUIVO ABAIXO**:
+**OBSERVAÇÃO: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.**
+[EVIDÊNCIAS.xlsx](https://github.com/user-attachments/files/17921619/EVIDENCIAS.xlsx)
+
