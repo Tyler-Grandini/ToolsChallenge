@@ -53,6 +53,8 @@ Como conferir se os dados das apis estão sendo salvos, modificados?
 
 **OBS1: TOMEI A LIBERDADE DE CODAR  O PROJETO INTEGRALMENTE EM INGLÊS E ALTEREI A TIPAGEM DE ALGUNS ATRIBUTOS, PENSANDO NAS MELHORES PRÁTICAS.**
 
-**OBS2: AS APIS SOMENTE SUPORTAM O FORMATO DE DATA ""dd/MM/yyyy HH:mm:ss".**
+**OBS2: AS APIS SOMENTE SUPORTAM O FORMATO DE DATA "dd/MM/yyyy HH:mm:ss".**
+
+Em caso de dúvida, me mande um oi! 31-99945-5969
 
 
