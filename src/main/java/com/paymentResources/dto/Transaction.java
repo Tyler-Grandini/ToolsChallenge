@@ -1,17 +1,14 @@
-package com.paymentResources.model;
+package com.paymentResources.dto;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 import java.util.UUID;
 
+@Data
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Transaction {
 
-    private String encryptedCardNumber;
+    private Integer encryptedCardNumber;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

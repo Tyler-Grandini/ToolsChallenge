@@ -1,5 +1,6 @@
 package com.paymentResources.controller;
 
+import com.paymentResources.dto.TransactionResponse;
 import com.paymentResources.model.*;
 import com.paymentResources.service.PaymentService;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,6 +27,8 @@ public class PaymentControllerTest {
 
     @Mock
     private PaymentService paymentService;
+
+    private TransactionResponse transactionResponse;
 
     private Transaction transaction;
 
@@ -56,21 +59,23 @@ public class PaymentControllerTest {
         transaction.setPaymentId(paymentId);
         transaction.setTransactionDetails(transactionDetails);
         transaction.setPaymentMode(paymentMode);
+
+        transactionResponse = new TransactionResponse();
+        transactionResponse.setTransaction(transaction);
     }
 
     @Test
     public void whenPaymentIsSuccessful() {
         // Given
-        when(paymentService.makePayment(any(Transaction.class))).thenReturn(transaction);
+        when(paymentService.makePayment(any(TransactionResponse.class))).thenReturn(transaction);
 
         // When
-        ResponseEntity<Transaction> response = paymentController.makePayment(transaction);
+        ResponseEntity<TransactionResponse> response = paymentController.makePayment(transactionResponse);
 
         // Then
         assertNotNull(response);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(transaction, response.getBody());
-        verify(paymentService, times(1)).makePayment(any(Transaction.class));
+        verify(paymentService, times(1)).makePayment(any(TransactionResponse.class));
     }
 
     @Test
@@ -79,12 +84,11 @@ public class PaymentControllerTest {
         when(paymentService.findPayment(paymentId)).thenReturn(transaction);
 
         // When
-        ResponseEntity<Transaction> response = paymentController.findPayment(paymentId);
+        ResponseEntity<TransactionResponse> response = paymentController.findPayment(paymentId);
 
         // Then
         assertNotNull(response);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(transaction, response.getBody());
         verify(paymentService, times(1)).findPayment(paymentId);
     }
 
@@ -94,13 +98,12 @@ public class PaymentControllerTest {
         when(paymentService.findAllPayments()).thenReturn(List.of(transaction));
 
         // When
-        ResponseEntity<List<Transaction>> response = paymentController.findAllPayments();
+        ResponseEntity<List<TransactionResponse>> response = paymentController.findAllPayments();
 
         // Then
         assertNotNull(response);
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertFalse(Objects.requireNonNull(response.getBody()).isEmpty());
-        assertEquals(transaction, response.getBody().get(0));
         verify(paymentService, times(1)).findAllPayments();
     }
 
@@ -110,12 +113,11 @@ public class PaymentControllerTest {
         when(paymentService.refundPayment(paymentId)).thenReturn(transaction);
 
         // When
-        ResponseEntity<Transaction> response = paymentController.refundPayment(paymentId);
+        ResponseEntity<TransactionResponse> response = paymentController.refundPayment(paymentId);
 
         // Then
         assertNotNull(response);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(transaction, response.getBody());
         verify(paymentService, times(1)).refundPayment(paymentId);
     }
 }

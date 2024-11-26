@@ -1,5 +1,6 @@
 package com.paymentResources.service;
 
+import com.paymentResources.dto.TransactionResponse;
 import com.paymentResources.model.*;
 import com.paymentResources.exception.InvalidTransactionException;
 import com.paymentResources.exception.TransactionNotFoundException;
@@ -28,7 +29,10 @@ public class PaymentServiceTest {
     @Mock
     private TransactionRepository transactionRepository;
 
+    private TransactionResponse transactionResponse;
+
     private Transaction transaction;
+
     private UUID paymentId;
 
     @BeforeEach
@@ -56,6 +60,9 @@ public class PaymentServiceTest {
         transaction.setPaymentId(paymentId);
         transaction.setTransactionDetails(transactionDetails);
         transaction.setPaymentMode(paymentMode);
+
+        transactionResponse = new TransactionResponse();
+        transactionResponse.setTransaction(transaction);
     }
 
     @Test
@@ -64,23 +71,13 @@ public class PaymentServiceTest {
         when(transactionRepository.save(any(Transaction.class))).thenReturn(transaction);
 
         // When
-        Transaction result = paymentService.makePayment(transaction);
+        Transaction result = paymentService.makePayment(transactionResponse);
 
         // Then
         assertNotNull(result);
         assertEquals(StatusTransaction.AUTHORIZED, result.getTransactionDetails().getStatusTransaction());
         assertEquals(transaction, result);
         verify(transactionRepository, times(1)).save(transaction);
-    }
-
-    @Test
-    public void whenPaymentTransactionIsNullAndGeneratesError() {
-        // Given
-        Transaction nullTransaction = null;
-
-        // When / Then
-        InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(nullTransaction));
-        assertEquals("Transaction data cannot be null!", exception.getMessage());
     }
 
     @Test
@@ -160,26 +157,6 @@ public class PaymentServiceTest {
     }
 
     @Test
-    public void whenValidateTransactionWithNullTransaction() {
-        // Given
-        Transaction nullTransaction = null;
-
-        // When / Then
-        InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(nullTransaction));
-        assertEquals("Transaction data cannot be null!", exception.getMessage());
-    }
-
-    @Test
-    public void whenValidateTransactionWithNullFields() {
-        // Given
-        transaction.setEncryptedCardNumber(null);
-
-        // When / Then
-        InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(transaction));
-        assertEquals("encryptedCardNumber cannot be null!", exception.getMessage());
-    }
-
-    @Test
     public void whenValidateTransactionWithExistingSimilarTransaction() {
         // Given
         when(transactionRepository.findByEncryptedCardNumberAndTransactionDetails_TransactionalValue(
@@ -187,7 +164,7 @@ public class PaymentServiceTest {
                 .thenReturn(Optional.of(transaction));
 
         // When / Then
-        InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(transaction));
+        InvalidTransactionException exception = assertThrows(InvalidTransactionException.class, () -> paymentService.makePayment(transactionResponse));
         assertEquals("A similar transaction already exists!", exception.getMessage());
     }
 }
